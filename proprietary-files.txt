@@ -24,7 +24,7 @@ vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 
 # Audio
-vendor/lib64/hw/audio.primary.sdm845.so
+vendor/lib64/hw/audio.primary.sm8250.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
@@ -35,7 +35,7 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libaudioroute_ext.so
 vendor/lib64/libcsd-client.so
 vendor/lib64/libqtigef.so
-vendor/lib/hw/audio.primary.sdm845.so
+vendor/lib/hw/audio.primary.sm8250.so
 vendor/lib/vndk/libxlog.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbrtac.so
@@ -368,8 +368,8 @@ vendor/firmware/a630_zap.elf
 vendor/firmware/a630_zap.mdt
 
 # Graphics (Vulkan)
-vendor/lib64/hw/vulkan.sdm845.so
-vendor/lib/hw/vulkan.sdm845.so
+vendor/lib64/hw/vulkan.sm8250.so
+vendor/lib/hw/vulkan.sm8250.so
 
 # IMS
 -product/app/uceShimService/uceShimService.apk
@@ -517,7 +517,7 @@ vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
 # Listen
-vendor/lib64/hw/sound_trigger.primary.sdm845.so
+vendor/lib64/hw/sound_trigger.primary.sm8250.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libgcs-calwrapper.so
@@ -528,7 +528,7 @@ vendor/lib64/libjnihelper.so
 vendor/lib64/liblistenjni.so
 vendor/lib64/liblistensoundmodel2.so
 vendor/lib64/libmulawdec.so
-vendor/lib/hw/sound_trigger.primary.sdm845.so
+vendor/lib/hw/sound_trigger.primary.sm8250.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so

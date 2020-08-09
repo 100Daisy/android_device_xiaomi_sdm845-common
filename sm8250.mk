@@ -9,10 +9,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/sdm845-common/sdm845-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
+# Dynamic Partitions
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -147,11 +151,11 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.sdm845 \
-    hwcomposer.sdm845 \
+    gralloc.sm8250 \
+    hwcomposer.sm8250 \
     libtinyxml \
     libvulkan \
-    memtrack.sdm845 \
+    memtrack.sm8250 \
     vendor.display.config@1.7 \
     vendor.qti.hardware.display.allocator@1.0-service
 
@@ -179,7 +183,7 @@ PRODUCT_BOOT_JARS += \
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/sdm845-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/sdm845-tavil-snd-card_Button_Jack.kl
+    $(LOCAL_PATH)/keylayout/sm8250-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/sm8250-tavil-snd-card_Button_Jack.kl
 
 # IPA
 PRODUCT_PACKAGES += \
@@ -188,7 +192,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_sdm845
+    android.hardware.light@2.0-service.xiaomi_sm8250
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -300,7 +304,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
-    thermal.sdm845
+    thermal.sm8250
 
 # Trust HAL
 PRODUCT_PACKAGES += \
@@ -323,7 +327,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
     android.hardware.vr@1.0-service \
-    vr.sdm845
+    vr.sm8250
 
 # WiFi
 PRODUCT_PACKAGES += \

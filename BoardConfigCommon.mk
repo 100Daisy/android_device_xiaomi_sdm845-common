@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := xiaomi
 
-COMMON_PATH := device/xiaomi/sdm845-common
+COMMON_PATH := device/xiaomi/sm8250-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -26,7 +26,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_USES_64_BIT_BINDER := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := sdm845
+TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -43,8 +43,8 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
 endif
 
 # Platform
-TARGET_BOARD_PLATFORM := sdm845
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno630
+TARGET_BOARD_PLATFORM := kona
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -118,7 +118,7 @@ TARGET_USES_MKE2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
-TARGET_POWER_SET_FEATURE_LIB := libpower_feature.xiaomi_sdm845
+TARGET_POWER_SET_FEATURE_LIB := libpower_feature.xiaomi_sm8250
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
@@ -168,4 +168,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/xiaomi/sdm845-common/BoardConfigVendor.mk
+-include vendor/xiaomi/sm8250-common/BoardConfigVendor.mk
